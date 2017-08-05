@@ -91,6 +91,23 @@ abstract class CommonRepository implements RepositoryInterface
     {
         return $this->model->get();
     }
+
+    /**
+     * Get all data , order by created_at descending
+     * */
+    public function allDesc()
+    {
+        return $this->model->orderBy('created_at', 'DESC')->get();
+    }
+
+    /**
+     * Get all data , order by created_at ascending
+     * */
+    public function allAsc()
+    {
+        return $this->model->orderBy('created_at', 'ASC')->get();
+    }
+
     /**
      * @param int $id
      *

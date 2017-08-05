@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -44,6 +45,14 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        // in case query is not found , send 404 back
+        if ($exception instanceof ModelNotFoundException) {
+            return response()->json([
+                'error' => 'Entity you looking for is not found dude'
+            ], 404);
+        }
+
+
         return parent::render($request, $exception);
     }
 
