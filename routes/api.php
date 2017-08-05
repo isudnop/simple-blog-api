@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/posts/latest', 'PostController@getPostsDesc')->name('get-posts-desc');
+
+Route::get('/posts/archive', 'PostController@getPostsAsc')->name('get-posts-asc');
+
+Route::post('/post', 'PostController@savePost')->name('save-post');
+
+Route::get('/post/{id}', 'PostController@getPost')->name('get-post');
