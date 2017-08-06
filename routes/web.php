@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Http\Request;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +15,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'UserController@showLoginPage');
+
+Route::get('/profile', 'UserController@showMe');
+
+Route::get('/post-list', 'UserController@showPostList');

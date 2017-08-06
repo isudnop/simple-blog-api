@@ -21,10 +21,13 @@ elixir(function(mix) {
     var bootstrapPath = 'node_modules/bootstrap-sass/assets';
     mix.sass('app.scss')
         .copy(bootstrapPath + '/fonts', 'public/fonts')
-        .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js');
+        .copy(bootstrapPath + '/javascripts/bootstrap.js', 'public/js');
+
+    var bootstrapPath = 'node_modules/bootstrap-sass/assets';
 
     mix.copy('resources/assets/js', 'public/js');
-    mix.copy('resources/assets/css/jquery-ui.css', 'public/css');
+    mix.copy('resources/assets/css', 'public/css');
+    mix.copy('resources/assets/fonts', 'public/fonts');
     mix.copy('resources/assets/images', 'public/css/images');
 
 });

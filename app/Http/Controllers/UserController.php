@@ -87,4 +87,9 @@ class UserController extends BaseController
 
         return response()->json($user->toArray(), 200);
     }
+
+    public function showLoginPage()
+    {
+        return view('login');
+    }
 }
