@@ -10,6 +10,7 @@ abstract class CommonValidator
     protected $messages = [
         'required' => 'The :attribute field is required.',
         'string' => 'The :attribute field must be string.',
+        'integer' => 'The :attribute field must be integer.',
     ];
 
     public function __construct(Validator $validator)

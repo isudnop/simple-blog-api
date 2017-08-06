@@ -7,7 +7,6 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use App\Repository\PostRepository;
 use App\Validators\PostValidator;
-use Illuminate\Validation\ValidationException;
 
 class PostController extends BaseController
 {
