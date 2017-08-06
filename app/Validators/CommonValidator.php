@@ -11,6 +11,7 @@ abstract class CommonValidator
         'required' => 'The :attribute field is required.',
         'string' => 'The :attribute field must be string.',
         'integer' => 'The :attribute field must be integer.',
+        'exists' => 'The :attribute field not exists in system.',
     ];
 
     public function __construct(Validator $validator)

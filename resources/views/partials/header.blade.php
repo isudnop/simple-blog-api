@@ -24,5 +24,25 @@
 
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        $(document).ready(function() {
+            $('#login-form').submit( function (e) {
+                e.preventDefault();
+                var email = $('#email').val();
+                var password = $('#password').val();
+                $.ajax({
+                    type: "POST",
+                    url:  '/api/login',
+                    data: $( this ).serialize(),
+                    success: function( msg ) {
+
+                    },
+                    error: function() {
+                        alert('YOU SHALL NOT PASS');
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>

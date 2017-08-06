@@ -35,7 +35,7 @@ class UserValidator extends CommonValidator
     public function validateLogin(array $params)
     {
         $rules = [
-            'email' => 'required|string|email',
+            'email' => 'required|string|email|exists:users,email',
             'password' => 'required|string',
         ];
 

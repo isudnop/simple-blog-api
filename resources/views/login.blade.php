@@ -5,8 +5,7 @@
             <div class="panel panel-default top login-radius">
                 <div class="panel-body">
                     <h3 class="text-center">Login</h3>
-
-                    <form method="" action="POST">
+                    <form id="login-form">
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                             <input type="email" name="email" id="email" class="form-control" placeholder="Email" aria-describedby="sizing-addon1" required>
@@ -17,8 +16,8 @@
                             <input type="password" name="password" id="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1" required>
                         </div>
                         <br>
+                        {{ csrf_field() }}
                         <button type="submit" class="btn btn-primary btn-block">Login</button>
-
                     </form>
                 </div>
             </div>

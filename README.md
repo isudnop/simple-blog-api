@@ -7,6 +7,7 @@ it provide endpoint for get/set post and alot of thing :D.
 - Composer
 - npm
 - mySQl
+- gulp
 
 ### installation
 1. clone this repo or load zip
@@ -14,18 +15,26 @@ it provide endpoint for get/set post and alot of thing :D.
 3. run `npm install`
 4. fill necessary data in .env file
 5. run `php artisan migrate` to migrate al db (make sure you provide DB auth in .env file)
+6. run `gulp` or `gulp watch`
 
 ### Endpoint 
 
-use prefix `/api`
+API use prefix `/api`, return in JSON format
 
-POST
+#####POSTS
 - GET `/posts/latest`  Get all post order by create date DESC
 - GET `/posts/archive` Get all post order by create date ASC
 - POST `/post`         Create new post
 - GET `/post/{id}`     Get Specific post by given ID
 
-USER
+#####USER
 - GET `/me?api_token=...` Get user profile by token
 - POST `/register`        Register user and get user json detail back
 - POST `/login`           Login user and get user json detail back
+
+--
+
+#####UI //WIP
+- `/` login page
+- `/register` register
+- `/post-list` post list page
