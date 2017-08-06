@@ -35,6 +35,7 @@ API use prefix `/api`, return in JSON format
 --
 
 #####UI //WIP
+- `/post-list` post list page
 - `/` login page
 - `/register` register
-- `/post-list` post list page
+

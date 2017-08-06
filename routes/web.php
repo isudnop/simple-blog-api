@@ -21,4 +21,4 @@ Route::get('/register', 'UserController@showRegisterPage');
 
 Route::get('/profile', 'UserController@showMe');
 
-Route::get('/post-list', 'UserController@showPostList');
+Route::get('/post-list', 'PostController@showPostList');

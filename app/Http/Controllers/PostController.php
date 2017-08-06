@@ -77,4 +77,11 @@ class PostController extends BaseController
 
         return response()->json(['result' => 'success'], 201);
     }
+
+    public function showPostList()
+    {
+        return view('post-list', [
+            'posts' => $this->postRepository->allDesc()
+        ]);
+    }
 }
