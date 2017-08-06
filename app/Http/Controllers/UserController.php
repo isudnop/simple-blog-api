@@ -57,6 +57,8 @@ class UserController extends BaseController
     {
         $param = $request->only(['email', 'password']);
 
+        $this->userValidator->validateLogin($param);
+
         $user = $this->userRepository->findByEmail($param['email']);
 
         if (password_verify($param['password'],$user->password)) {

@@ -28,4 +28,17 @@ class UserValidator extends CommonValidator
 
         $this->validate($params, $rules);
     }
+
+    /**
+     * @param array $params
+     */
+    public function validateLogin(array $params)
+    {
+        $rules = [
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ];
+
+        $this->validate($params, $rules);
+    }
 }
