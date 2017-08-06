@@ -92,4 +92,9 @@ class UserController extends BaseController
     {
         return view('login');
     }
+
+    public function showRegisterPage()
+    {
+        return view('register');
+    }
 }

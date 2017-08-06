@@ -17,6 +17,8 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', 'UserController@showLoginPage');
 
+Route::get('/register', 'UserController@showRegisterPage');
+
 Route::get('/profile', 'UserController@showMe');
 
 Route::get('/post-list', 'UserController@showPostList');

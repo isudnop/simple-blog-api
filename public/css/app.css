@@ -7670,4 +7670,12 @@ button.close {
   }
 }
 
+.top {
+  margin-top: 40%;
+}
+
+.login-radius {
+  border-radius: 5px;
+}
+
 /*# sourceMappingURL=app.css.map */
