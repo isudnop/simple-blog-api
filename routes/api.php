@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,9 @@ Route::get('/posts/archive', 'PostController@getPostsAsc')->name('get-posts-asc'
 Route::post('/post', 'PostController@savePost')->name('save-post');
 
 Route::get('/post/{id}', 'PostController@getPost')->name('get-post');
+
+Route::get('/me', 'UserController@getUserDetail')->name('get-user');
+
+Route::post('/register', 'UserController@registerUser')->name('register-user');
+
+Route::post('/login', 'UserController@loginUser')->name('login-user');
